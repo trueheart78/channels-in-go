@@ -10,6 +10,24 @@ From [Distributed Computing with Go](https://www.packtpub.com/application-develo
 * [Multiple Cashiers without Channels][cashier-sans-channels]
 * [Multiple Cashiers with Channels][cashier-with-channels]
 
-[cashier-lacking]:        cashier/cashier-1-lacking.go
-[cashier-sans-channels]:  channels/cashier-2-sans-channels.go
-[cashier-with-channels]:  channels/cashier-3-with-channels.go
+## Channels in General
+
+* [Channel Basic Demo][channel-demo]
+* [Channel Function Demo][channel-with-functions]
+* [Channel Being Closed][channel-being-closed]
+
+## Multiplexing
+
+* [Naive Multiplexing][multiplexing-naive]
+* [Proper Multiplexing - Attempt 1][multiplexing-proper-1]
+* [Proper Multiplexing - Attempt 2][multiplexing-proper-2]
+
+[cashier-lacking]:         cashier/cashier-1-lacking.go
+[cashier-sans-channels]:   cashier/cashier-2-sans-channels.go
+[cashier-with-channels]:   cashier/cashier-3-with-channels.go
+[channel-demo]:            channels/channel-demo.go
+[channel-with-functions]:  channels/channel-with-functions-demo.go
+[channel-being-closed]:    channels/channel-being-closed-demo.go
+[multiplexing-naive]:      multiplexing/naive-multiplexing.go
+[multiplexing-proper-1]:   multiplexing/proper-multiplexing-attempt-1.go
+[multiplexing-proper-2]:   multiplexing/proper-multiplexing-attempt-2.go
