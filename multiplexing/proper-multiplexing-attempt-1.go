@@ -25,7 +25,7 @@ func main() {
 				fmt.Println(val)
 			case c := <-ch3:
 				fmt.Println(c)
-			case <-done:
+			case <-done: // this will _never_ get called, so how does it exit? It _leaks_.
 				fmt.Println("exiting...")
 				completed <- true
 				return
@@ -35,7 +35,4 @@ func main() {
 
 	ch1 <- 100
 	ch2 <- "ch2 msg"
-	// Uncomment us to avoid leaking the 'select' goroutine!
-	// close(done)
-	// <-completed
 }

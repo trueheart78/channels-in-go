@@ -25,7 +25,7 @@ func main() {
 				fmt.Println(val)
 			case c := <-ch3:
 				fmt.Println(c)
-			case <-done:
+			case <-done: // when the channel is closed, this case is executed now
 				fmt.Println("exiting...")
 				completed <- true
 				return
@@ -35,7 +35,8 @@ func main() {
 
 	ch1 <- 100
 	ch2 <- "ch2 msg"
-	// Uncomment us to avoid leaking the 'select' goroutine!
+
+	// added to avoid leaking the 'select' goroutine
 	close(done)
 	<-completed
 }
