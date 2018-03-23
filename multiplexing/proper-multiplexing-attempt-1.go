@@ -18,7 +18,6 @@ func main() {
 	ch3 <- 3
 	go func() {
 		for {
-
 			select {
 			case <-ch1:
 				fmt.Println("Received data from ch1")
